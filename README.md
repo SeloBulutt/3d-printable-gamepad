@@ -21,6 +21,7 @@ bu kodlardan ise butonların varsayılan gamepad butonlarından hangilerinin ça
 
 Joystick ve buton bağlantıları kodun başında arduino nano esp32 ye göre tanımlanmıştır. isterseniz oradakileri kullanabilir isterseniz değiştirebilirsiniz. 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 A joystick you can print with a 3D printer and develop at home.
 I used an Arduino Nano ESP 32 in my design. You can use only the ESP32 or other microprocessors of your choice. However, for my code, a board with Bluetooth integration must be selected.
