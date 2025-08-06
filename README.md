@@ -15,15 +15,10 @@ bu kodlardan joystick iniz istediğiniz eksenleri hareket ettirmesini seçiyorsu
 if (joy1Btn == LOW && joy1BtnPrev == HIGH) {
 
       Serial.println(F("Left Joystick Button"));
-      
       bleGamepad.press(BUTTON_10);
-      
       delay(debounceDelay);
-      
     } else if (joy1Btn == HIGH && joy1BtnPrev == LOW) {
-    
       bleGamepad.release(BUTTON_10);
-      
     }
 
 bu kodlardan ise butonların varsayılan gamepad butonlarından hangilerinin çalışmasını istediğinizi seçiyorsunuz. Burada bulunan BUTTON_10 yazısı BUTTON_1 ile BUTTON_17 arasında değiştirilebilmektedir. Aynı şekilde değiştirerek istediğiniz butonları aktif edebilirsiniz.
