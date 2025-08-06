@@ -38,18 +38,22 @@ This Arduino code works with the BleGamepad library. You need to install this li
 In my design, I used two joysticks and four buttons. Using more is your choice. I wanted to create a product with the materials I had on hand.
 
 bleGamepadConfig.setButtonCount(16);
+
 bleGamepadConfig.setHatSwitchCount(0);
+
 bleGamepadConfig.setWhichAxes(true, true, false, true, true, false, false, false); // X, Y, Z, rZ active
+
 
 With these codes, you select the desired axes for your joystick to move. You can observe the results by changing this to true or false and act accordingly.
 
 if (joy1Btn == LOW && joy1BtnPrev == HIGH) {
-Serial.println(F("Left Joystick Button"));
-bleGamepad.press(BUTTON_10);
-delay(debounceDelay);
-} else if (joy1Btn == HIGH && joy1BtnPrev == LOW) {
-bleGamepad.release(BUTTON_10);
-}
+
+      Serial.println(F("Left Joystick Button"));
+      bleGamepad.press(BUTTON_10);
+      delay(debounceDelay);
+      } else if (joy1Btn == HIGH && joy1BtnPrev == LOW) {
+      bleGamepad.release(BUTTON_10);
+      }
 
 With these codes, you select which of the default gamepad buttons you want to use. The text BUTTON_10 here can be changed between BUTTON_1 and BUTTON_17. You can activate the desired buttons by changing it in the same way.
 
