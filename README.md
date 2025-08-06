@@ -4,17 +4,26 @@ Bu arduino kodu BleGamepad kütüphanesi ile çalışmaktadır. bu kütüphaneyi
 Kendi tasarımımda 2 adet joystick ve 4 adet buton kullandım daha fazla kullanmak sizin tercihiniz ben elimde olan malzemeler ile bir ürün çıkarmak istedim. 
 
 bleGamepadConfig.setButtonCount(16);
+
 bleGamepadConfig.setHatSwitchCount(0);
+
 bleGamepadConfig.setWhichAxes(true, true, false, true, true, false, false, false);  // X, Y, Z, rZ aktif
+
 
 bu kodlardan joystick iniz istediğiniz eksenleri hareket ettirmesini seçiyorsunuz. Buradaki true yada false değiştirerek sonuçları gözlemleyebilir buna görede hareket edebilirsiniz.
 
 if (joy1Btn == LOW && joy1BtnPrev == HIGH) {
+
       Serial.println(F("Left Joystick Button"));
+      
       bleGamepad.press(BUTTON_10);
+      
       delay(debounceDelay);
+      
     } else if (joy1Btn == HIGH && joy1BtnPrev == LOW) {
+    
       bleGamepad.release(BUTTON_10);
+      
     }
 
 bu kodlardan ise butonların varsayılan gamepad butonlarından hangilerinin çalışmasını istediğinizi seçiyorsunuz. Burada bulunan BUTTON_10 yazısı BUTTON_1 ile BUTTON_17 arasında değiştirilebilmektedir. Aynı şekilde değiştirerek istediğiniz butonları aktif edebilirsiniz.
